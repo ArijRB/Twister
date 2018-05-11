@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Resource
+		name="jdbc/db" type="javax.sql.DataSource"
+		maxActive="100" maxIdle="30" maxWait="10000"
+		url="jdbc:mysql://localhost/3702151"
+		driverClassName="com.mysql.jdbc.Driver"
+		username="root" password="root"
+	/>
+</Context>

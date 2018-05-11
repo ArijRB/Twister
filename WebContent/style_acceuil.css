@@ -1,0 +1,118 @@
+@font-face{
+	font-family: titlefont;
+	src : url("./TWISTER/GOTHICBI.TTF");
+}
+
+body{
+	background-image: url("./TWISTER/tornado-05.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: fixed top left;
+	background-size: 100% 100%;
+}
+
+img{
+	max-height: 100%;
+	max-width: 100%;
+	object-fit: contain;
+}
+
+#logo{
+	position: fixed;
+	height: 40%;
+	width: 27%;
+	top: 0%;
+	left: 2%;
+}
+
+#Login_forum{
+	position: absolute;
+	width: 25%;
+	bottom: 32%;
+	right: 4%;
+}
+
+.caption{
+	margin : 0px;
+	font-size: 25px;
+	font-family: titlefont;
+	padding-left: 1%;
+}
+
+input{
+	position: relative;
+	border-radius: 20px;
+	border-style: none; 
+	padding-left: 5%;
+	margin: 0px; 
+	height: 40px;
+	width: 100%;
+	opacity: 1;
+	color: black;
+	font-family: titlefont;
+}
+
+.forum_title{
+	margin : 0px;
+	font-size: 40px;
+	font-family: titlefont;
+	padding-left: 1%;
+}
+
+.bouton_submits{
+	border-radius: 20px;
+	border-style: none;
+	padding: 0px;
+	margin: 0px;
+	height: 30px;
+	width: 20%;
+	font-family: titlefont;
+}
+
+
+#passforgot{
+	margin-left: 3%;
+	border-radius: 20px;
+	border-style: none;
+	padding: 0px;
+	height: 30px;
+	width: 45%;
+	font-family: titlefont;
+}
+
+#creation{
+	border-radius: 20px;
+	border-style: none;
+	padding: 0px;
+	margin: 0px;
+	height: 30px;
+	width: 40%;
+	font-family: titlefont;
+}
+
+#footer{
+	position: fixed;
+	width: 1000px;
+	bottom: 2%;
+	left: 1%;
+}
+
+.footer_span{
+	font-family: titlefont;
+	margin-left: 5%;
+	color: white;
+
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}

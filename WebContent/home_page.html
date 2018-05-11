@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="style_home.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<title> Home </title>
+	</head>
+
+	<body>
+		<div id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<div class = "menu_items">
+					<a href="javascript:void(0);" onClick="javascript:makeMainPanel(0, undefined, 'l')">Profile</a>
+				</div>
+
+				<div class = "menu_items">
+					<a href="javascript:void(0);" onClick="javascript:makeMainPanel(0)">My Messages</a>
+				</div>
+
+				<div class = "menu_items">
+					<a href="./en_cours_de_construction.html">Settings</a>
+				</div>
+
+				<div class = "menu_items">
+					<a href="javascript:void(0);" onClick="javascript:deconnecte();">Logout</a>
+				</div>
+		</div>
+
+		<header>
+			<span style="font-size:30px;cursor:pointer;color:white" onclick="openNav()">&#9776;</span>
+			<img id="logo" src= "./TWISTER/home_page/logotrans.png" />
+
+			<div id = "search_bar" onmouseout="javascript:popuphide();" onmouseover="javascript:popupw();">
+
+				<form method="get" action="Javascript:function a(){ return; }" onsubmit="javascript:getSearch(this);">
+					<input type="text" name="search" placeholder="Search..." required>
+	
+					<div class="check">
+						<span class = "checkbox_part">
+					 		<label class="checkbox_label" for="Users">Posts</label>
+							<input type="checkbox" class="checkbox" name="Posts" value="Posts" id="Posts" />
+						</span>
+						<span class = "checkbox_part">
+					 		<label class="checkbox_label" for="Users">Users</label>
+					 		<input type="checkbox" class="checkbox" name="Users" value="Users" id="Users" />
+					 	</span>
+					</div>
+				</form>
+				
+			</div>
+			
+			<!--<div id = "messages">
+								<div class="photo-profile"><img id="profile_message" src= "./TWISTER/empty-profile.png" /><div id="profile_name_message"><a href="javascript:void(0);" onClick="javascript:makeMainPanel('+(env.friendsCherches)[i].id+', undefined, \''+ (env.friendsCherches)[i].login+'\');"> + (env.friendsCherches)[i].login + </a></div></div> <br/>
+				
+				<div class="photo-profile"><img id="profile_message" src= "./TWISTER/empty-profile.png" /><div id="profile_name_message"><a href="javascript:void(0);" onClick="javascript:makeMainPanel('+(env.friendsCherches)[i].id+', undefined, \''+ (env.friendsCherches)[i].login+'\');"> + (env.friendsCherches)[i].login + </a></div></div>
+			</div>-->
+		</header>
+		
+		
+
+	</body>
+
+
+	<script>
+					function openNav() {
+						document.getElementById("mySidenav").style.width = "250px";
+						document.getElementById("main").style.marginLeft = "250px";
+					}
+
+					function closeNav() {
+						document.getElementById("mySidenav").style.width = "0";
+						document.getElementById("main").style.marginLeft = "0";
+					}
+	</script>
+
+
+</html>

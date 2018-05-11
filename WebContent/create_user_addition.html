@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="style_create_user_addition.css" />
+		<title> create_user </title>
+	</head>
+
+	<body>
+
+		<div id="logo">
+			<img src="./TWISTER/imageedit_1_9035904914.png">
+		</div>
+
+		<div id="Login_forum">
+
+			<form method="get" action="Javascript:function a(){ return; }" onsubmit="enregistrementF(this)">
+				<p class = "forum_title">Create Account</p>
+				
+				<p id="civilite">
+					<span class = "radio_part">
+				 		<label class="radio_label" for="M."> M.</label>
+						<input type="radio" class="radio" name="civilite" value="M." id="M." />
+					</span>
+					<span class = "radio_part">
+				 		<label class="radio_label" for="Mme."> Mme.</label>
+				 		<input type="radio" class="radio" name="civilite" value="Mme." id="Mme." />
+				 	</span>
+				</p>
+				
+				<p>
+					<input class="info" type="text" name="pseudo" placeholder="Pseudo..." size="40" required>
+				</p>
+				<p>
+					<input class="info" type="password" name="password" placeholder="Password..." size="40" required>
+				</p>
+
+				<p>
+					<input class="info" type="text" name="nom" placeholder="Nom..." size="40" required>
+				</p>
+
+				<p>
+					<input class="info" type="text" name="prenom" placeholder="Prenom..." size="40" required>
+				</p>
+
+
+				<p>
+					<input class="info" type="email" name="email" placeholder=email... required />
+				</p>
+				<p>
+					<input class="info" type="tel" name="tel" placeholder="Numero de telephone..."/>
+				</p>
+
+				<p>
+					<span class = "date">
+				 		<label id="date_label" for="date_naissance">Date of Birth</label>
+						<input id="date_format" type="date" placeholder=jj-mm-aaaa required/>
+					</span>
+				</p>
+
+				<p>
+					<input type="submit" name="Envoyer" value="Start" class="bouton_submits">
+				</p>
+
+			</form>
+
+		</div>
+
+		<div id="footer">
+			<span class="footer_span">
+				<a href="A propos">A propos</a>
+			</span>
+			<span class="footer_span">
+				<a href="Contactez nous">Contactez-nous</a>
+			</span>
+			<span class="footer_span">
+				<a href="Conditions">Conditions</a>
+			</span>
+			<span class="footer_span">
+				<a href="Politique de confidentialité">Politique de confidentialité</a>
+			</span>
+			<span class="footer_span">
+				© 2018 Twister
+			</span>
+		</div>
+
+
+	</body>
+
+</html>

@@ -1,0 +1,25 @@
+@font-face{
+	font-family: titlefont;
+	src : url("./TWISTER/GOTHICBI.TTF");
+}
+
+body{
+	background-image: url("./TWISTER/home_page/background_home.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: fixed top left;
+	background-size: 100% 100%;
+    font-family: titlefont;
+}
+
+p{
+	font-family: titlefont;
+	font-size: 20px;
+	/*display: flex;
+  	flex-direction: column;
+  	justify-content: middle;*/
+  	text-align: center;
+  	position: fixed;
+  	top: 35%;
+  	left: 35%;
+}

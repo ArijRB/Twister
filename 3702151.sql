@@ -1,0 +1,272 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.4.1deb2ubuntu2
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: May 02, 2018 at 06:44 PM
+-- Server version: 5.7.22-0ubuntu0.16.04.1
+-- PHP Version: 7.0.28-0ubuntu0.16.04.1
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `3702151`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `friends`
+--
+
+CREATE TABLE `friends` (
+  `source` int(11) NOT NULL,
+  `cible` int(11) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='table des friends';
+
+--
+-- Dumping data for table `friends`
+--
+
+INSERT INTO `friends` (`source`, `cible`, `timestamp`) VALUES
+(1, 12, '2018-04-18 10:58:22'),
+(12, 1, '2018-05-02 15:39:11'),
+(12, 14, '2018-05-01 15:37:37'),
+(12, 15, '2018-05-01 15:38:19'),
+(14, 12, '2018-05-02 15:45:36'),
+(14, 13, '2018-04-19 13:31:16'),
+(14, 15, '2018-04-19 13:30:19'),
+(15, 4, '2018-02-28 19:49:12');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `session`
+--
+
+CREATE TABLE `session` (
+  `clef` varchar(32) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `debut` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `fin` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `connecte` tinyint(1) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='table des connexions';
+
+--
+-- Dumping data for table `session`
+--
+
+INSERT INTO `session` (`clef`, `id_user`, `debut`, `fin`, `connecte`) VALUES
+('03DKwbE3PJye2DSJcxFp4Flb3Jtl1EhI', 12, '2018-04-18 17:17:54', '0000-00-00 00:00:00', 1),
+('0flSwyjpUhSM0nEswRv2PNaDZ0KBqnUp', 14, '2018-04-26 16:29:43', '0000-00-00 00:00:00', 1),
+('0NjfFDM6ZpYQYuX5L8NzB6BdovB8GVsG', 12, '2018-04-28 16:14:52', '0000-00-00 00:00:00', 1),
+('1d60MOt6WSrmfUblKQxKKBFI8wVnuzUU', 12, '2018-04-21 10:41:02', '0000-00-00 00:00:00', 1),
+('1g9BS2uAinpndY6o8dLmYaYIEIkIFHVl', 12, '2018-04-18 10:52:31', '0000-00-00 00:00:00', 1),
+('1PNBg5Ll8OvXDT2mDbl1kM1fPc079Cfq', 12, '2018-05-02 15:38:16', '2018-05-02 15:43:53', 0),
+('3AZgSbKHSxHS5AklnXtQV31PESsSGw31', 12, '2018-04-18 17:52:50', '0000-00-00 00:00:00', 1),
+('3ingATCbPeVu6CjzbvfV7a8QUpZ2jqWN', 16, '2018-02-26 21:23:47', '0000-00-00 00:00:00', 1),
+('3Sysvvn98qrtsgg9QcWGh1MfhMg7Xo1U', 12, '2018-04-18 17:19:17', '0000-00-00 00:00:00', 1),
+('3tRWWMJdTIS1Ru39AIaXcvEcbYWc92tX', 12, '2018-05-01 21:50:45', '0000-00-00 00:00:00', 1),
+('4PkneUVqD7yyZBybhq50awRyPXmStR9a', 12, '2018-05-01 16:33:03', '0000-00-00 00:00:00', 1),
+('4Wu64P1LujiMFYJhSpPjsg5oTmb8ZjdE', 12, '2018-04-18 15:25:33', '0000-00-00 00:00:00', 1),
+('4Z2bl8dAzzTDLRS2IZZ5ZUwqR1gt2foW', 12, '2018-04-19 13:41:36', '2018-04-21 09:18:03', 0),
+('5rX9ht4zKYCUsqxy4v1vM29lds4OY3wD', 14, '2018-04-19 13:23:27', '0000-00-00 00:00:00', 1),
+('5UYtoOBpQwcWafcH2L7h1xCGbYqFQAhg', 14, '2018-05-02 15:44:28', '0000-00-00 00:00:00', 1),
+('6J0uu2GgFI6c06Ii2H0bDlqiPfDx4Bwl', 12, '2018-04-19 13:13:06', '0000-00-00 00:00:00', 1),
+('7aQxzpwM1bbEhIgXq2NWZMAJYCQI2H2i', 12, '2018-04-18 17:57:33', '0000-00-00 00:00:00', 1),
+('7Sj6rQFGvd8Ltt07BHtEopvZNF4DNVCO', 12, '2018-04-18 10:24:19', '0000-00-00 00:00:00', 1),
+('7XRj59cDq9YG7k8VWhWUlnteK5hRNRk2', 12, '2018-05-01 23:37:51', '0000-00-00 00:00:00', 1),
+('8acssMVVwP0sivhUmAdxw9Nb2kn4mgyU', 14, '2018-04-26 15:47:50', '0000-00-00 00:00:00', 1),
+('8k7S3h3PbgwKh7zuUTQIiVUy7rUBQXid', 12, '2018-04-18 20:46:54', '0000-00-00 00:00:00', 1),
+('8QrzXAQ0LoRKJ0E3cTMQp7A96RGhvnd8', 12, '2018-04-26 15:41:57', '0000-00-00 00:00:00', 1),
+('97selsfKRQyzYrZiYZXRpX55sEVWtSr2', 12, '2018-04-18 13:49:57', '0000-00-00 00:00:00', 1),
+('a2CJ0UtjSyCrK3lPQALnTJWUrH7OgERH', 12, '2018-05-01 20:06:21', '0000-00-00 00:00:00', 1),
+('A7BRoHNey7g36MGgDBeOQSZRIkFdLojk', 12, '2018-04-18 09:43:46', '0000-00-00 00:00:00', 1),
+('aQMDGOYQGuTsAO8cQSl1fYjePKx04jbB', 12, '2018-04-21 10:44:14', '0000-00-00 00:00:00', 1),
+('bfxqzbK0U5fUcF0poDv1wFzoM7mHxsWD', 12, '2018-04-19 12:59:08', '0000-00-00 00:00:00', 1),
+('bpRcLNRyNhGKXStcBxfevhYKn1IwnaCZ', 14, '2018-04-26 15:44:14', '0000-00-00 00:00:00', 1),
+('bs9hByok4ihz7upI47djy5jcBGg7GqBO', 4, '2018-02-23 09:01:18', '0000-00-00 00:00:00', 1),
+('bTvPFzNKWuNL94imeKOOpCWBSySQW8JG', 12, '2018-04-18 11:23:19', '0000-00-00 00:00:00', 1),
+('btw86z8Q2Gfoo6X9GoR4hUEqzDHbzCRr', 12, '2018-04-18 09:44:17', '0000-00-00 00:00:00', 1),
+('bzE1yMgTin2k6ZmqeB9Ek7ZlV8NSISnO', 12, '2018-04-18 13:37:53', '0000-00-00 00:00:00', 1),
+('c1OQB6Rf0QN7tkNDQ7VDnNcfZbj34T0F', 12, '2018-04-18 14:33:16', '0000-00-00 00:00:00', 1),
+('csPWfORsM8ZOVXU1yjBwcLn784tFBYEv', 12, '2018-04-18 14:25:16', '0000-00-00 00:00:00', 1),
+('cTA8ByXS00n3hmcuLWldETQW3eks2HT6', 12, '2018-04-21 10:27:20', '0000-00-00 00:00:00', 1),
+('da1DV6nMu4PkSFiHrOmgaPaaaP1MXXEp', 12, '2018-05-01 20:02:53', '0000-00-00 00:00:00', 1),
+('dG2Q1qv4SV6TR1ahDpoHURlkmZfxCqZS', 12, '2018-04-21 09:57:36', '0000-00-00 00:00:00', 1),
+('DgPBbRDIuWvr1WlKsqCOUr4GSJgZtICR', 12, '2018-04-18 20:40:17', '0000-00-00 00:00:00', 1),
+('dHCHWDktodUXJEzOzMpMVQo8BFYdjOMq', 12, '2018-04-21 10:13:34', '0000-00-00 00:00:00', 1),
+('dozGKpiVmp9IUpmmWnYlN706YHmqCNah', 12, '2018-04-21 09:56:15', '0000-00-00 00:00:00', 1),
+('drQ2CG4ctrVW80NGeiau8GN3ypvADvEQ', 12, '2018-04-18 14:55:08', '0000-00-00 00:00:00', 1),
+('DTrK6VJ6dCM50ERaMGrIXqZQMXp1kfNz', 12, '2018-04-19 13:25:35', '0000-00-00 00:00:00', 1),
+('DxGAMY9aIihCx4GeBPDH16OXHByxnHrO', 12, '2018-04-26 15:56:40', '0000-00-00 00:00:00', 1),
+('dXrEDVdAglSPFc4phbBuwzsrc2pdlCJX', 12, '2018-04-18 15:43:36', '0000-00-00 00:00:00', 1),
+('e27yPHcxN7mgopguQrJxSducRlVsMMni', 12, '2018-04-21 10:51:17', '0000-00-00 00:00:00', 1),
+('e5ncBaqwu8Mcl7fYZNcYFUcFjqX9QBOQ', 12, '2018-04-19 12:49:47', '0000-00-00 00:00:00', 1),
+('e8czTDs0qAr8rcts4C4okfhDmyZPzc9C', 12, '2018-04-18 17:21:51', '0000-00-00 00:00:00', 1),
+('ejNoV5WMbS864MuxRaO5nShVIgTsr666', 12, '2018-04-18 20:35:04', '0000-00-00 00:00:00', 1),
+('Euk9uYwmUpSHREuVFk5dImszRnANrFXz', 12, '2018-04-26 15:40:08', '0000-00-00 00:00:00', 1),
+('eZrcIH4hjQZSWjsp8NwccBnMhTUlahkE', 12, '2018-04-19 13:34:42', '0000-00-00 00:00:00', 1),
+('fhbrfJm5K3e1CFJTI6CXXZCnFzQRkpsS', 14, '2018-04-19 13:30:07', '0000-00-00 00:00:00', 1),
+('fqZpWUH4a47RZuzYcUaWqrxymdaPmTFW', 12, '2018-04-18 15:00:29', '0000-00-00 00:00:00', 1),
+('FZ5yzF68Yu9Pa1G91439XeNzKAtHtH1C', 12, '2018-04-18 10:54:52', '0000-00-00 00:00:00', 1),
+('G6NtbWpDx1BrUYFjCiaULfoGkMlkbwOD', 12, '2018-04-18 14:27:48', '0000-00-00 00:00:00', 1),
+('gw4CmNfBVPTtcWXa2SHf9dxz62etehuy', 12, '2018-05-02 15:37:44', '0000-00-00 00:00:00', 1),
+('GyfAC81F4P5XfGhzUAJikPHM6ea4yS7b', 12, '2018-04-19 13:21:01', '0000-00-00 00:00:00', 1),
+('H3KsJ05m8rIxkcN2YGxJlViRyxmkXuBF', 14, '2018-04-26 15:57:00', '0000-00-00 00:00:00', 1),
+('h4gnHab8nG7yYoRDfJeEhB3YtJQ33231', 12, '2018-04-26 15:54:14', '0000-00-00 00:00:00', 1),
+('hAHHZqA0twSgxnft0mufi6y9PiVIdR22', 12, '2018-04-18 10:52:35', '0000-00-00 00:00:00', 1),
+('he73RnKQMOfvoChLkt9vCMfmf7Pw1wxS', 12, '2018-04-18 11:55:37', '0000-00-00 00:00:00', 1),
+('HebsfZvrRZrhK4mxgUkBE1iBnbfdd6ps', 12, '2018-04-18 17:32:24', '0000-00-00 00:00:00', 1),
+('hSDtsGb2IS7K7FWF4GcZmT8f9paX44i1', 12, '2018-05-01 21:49:09', '0000-00-00 00:00:00', 1),
+('HuHRTKx4rkM0RXfP8FDXgk3ztaqRg530', 12, '2018-04-26 15:31:18', '0000-00-00 00:00:00', 1),
+('i4EwKu9SgyW7zQ2hNWct4ShXnrWWgfsa', 14, '2018-05-01 20:33:01', '0000-00-00 00:00:00', 1),
+('ifLOfKFow8tOtRiz7PSRgGmeh20jwh5B', 12, '2018-04-18 17:07:42', '0000-00-00 00:00:00', 1),
+('IJHpqDKYGVvk5l8hhZT8mdqXktpULKSq', 12, '2018-05-01 19:57:44', '0000-00-00 00:00:00', 1),
+('kiqJt80aqtDXoXDoPGfhSXFPdxueI634', 16, '2018-02-26 21:22:43', '2018-02-26 21:23:29', 0),
+('kzS4PV03dfXEVsJKo5rpofvhk6zQxw4i', 12, '2018-04-18 14:52:49', '0000-00-00 00:00:00', 1),
+('LGKbf19EZSiy8COrvtdrTDfDj8G3wH3e', 12, '2018-04-18 17:39:45', '0000-00-00 00:00:00', 1),
+('lhybOGHUVIXw9wOuCzfmJjwgmy24UaWt', 12, '2018-05-02 16:35:24', '0000-00-00 00:00:00', 1),
+('LqQ8iCRrWX0Cijc8yxgMglNVh5iUAIWq', 12, '2018-04-21 10:03:52', '0000-00-00 00:00:00', 1),
+('Lu4aE8hjmw9f1VUmH3yZ3t6r4nvcTKj9', 12, '2018-04-18 20:01:28', '0000-00-00 00:00:00', 1),
+('lXV6fqr37xIei17aZMpYgXp5JnqvBqFF', 14, '2018-05-01 21:56:01', '0000-00-00 00:00:00', 1),
+('M4oVDC8hFdx9nMUWUCSvAHzvlmiRe9Wl', 12, '2018-04-21 10:05:03', '0000-00-00 00:00:00', 1),
+('mcvcqSExuHO2wDF8fQkVVEtKSyRxBPVL', 14, '2018-04-18 10:53:06', '0000-00-00 00:00:00', 1),
+('MDkg249cELgLuqb1n9n4dJSyPORyHebQ', 14, '2018-05-01 23:45:34', '0000-00-00 00:00:00', 1),
+('MVbSLRtqoSxB9WUmfwWIQBNJqqy9IhPi', 15, '2018-02-24 22:17:29', '0000-00-00 00:00:00', 1),
+('NC3WpywUsxRCYiBxmMqT5KdcZhMqNMcW', 13, '2018-02-16 08:18:58', '2018-02-16 08:20:16', 0),
+('Ndp8NOU6XrzKUEYy8SOMGXH3295YJiOI', 12, '2018-04-26 16:34:11', '0000-00-00 00:00:00', 1),
+('NgB702sf3tlem9EWnHeimpy9APjKWqaa', 12, '2018-05-01 15:37:16', '0000-00-00 00:00:00', 1),
+('NTZNcjtS3eU9aCQ9rM1KP83khgBFOCt6', 12, '2018-04-18 20:22:12', '0000-00-00 00:00:00', 1),
+('Nwf6WS9cFKSBsUGEkgplfVJICDxtnEAl', 12, '2018-05-01 21:13:15', '0000-00-00 00:00:00', 1),
+('OjnRf2EXz2RFiY8rUX3HsUM7x5eORqXs', 14, '2018-05-02 15:43:56', '0000-00-00 00:00:00', 1),
+('oqulhRqrAqH8LnBqTMuTuAl8pMoLaK4w', 12, '2018-05-01 20:20:40', '0000-00-00 00:00:00', 1),
+('ov2sOoG1pWza8qL8snpwQH8gFsTD8Egc', 12, '2018-04-19 13:21:01', '0000-00-00 00:00:00', 1),
+('OVBLflHCgkWsSCvP3tAyLX4gnEF5wGha', 12, '2018-05-01 15:44:06', '0000-00-00 00:00:00', 1),
+('OXI7KgePPjSRMv0woQQazBFLFuxLMtBD', 12, '2018-04-21 10:11:40', '0000-00-00 00:00:00', 1),
+('PdPvXTYM1g60DTbTmXnPs95dh4SxjRcv', 12, '2018-04-21 09:58:52', '0000-00-00 00:00:00', 1),
+('pnTOBa5etJ3HE56RCeXjbFAGR1eBeeIB', 12, '2018-04-18 10:59:16', '0000-00-00 00:00:00', 1),
+('pQ2VBSFSdHflQzH9l7TwX2HdkgnXTLbO', 12, '2018-04-21 09:56:35', '0000-00-00 00:00:00', 1),
+('PqVDEA1koBVZmCmSvseHx1lEVdddQ0lg', 12, '2018-05-02 16:20:49', '0000-00-00 00:00:00', 1),
+('pXNhtwXgijpMCyRF4TkwIKGBsGCn8RQ5', 12, '2018-04-18 19:45:08', '0000-00-00 00:00:00', 1),
+('q1wKr9Xl0qWwF2Te7iObmQkBUtzxsgNA', 14, '2018-04-18 12:08:40', '0000-00-00 00:00:00', 1),
+('Q97l6gyIXL1xPnVFxaYaQuxQzBaDW9ji', 12, '2018-04-21 09:54:55', '0000-00-00 00:00:00', 1),
+('QkbkMckrO0BotcCPEfKsCPCISz1MD62N', 12, '2018-04-19 13:47:36', '0000-00-00 00:00:00', 1),
+('qmA9GOBEI32rKVfon15Lx6rqtdLy1u2V', 12, '2018-04-26 15:55:22', '0000-00-00 00:00:00', 1),
+('QreZ1uplIbPcJ76Ujioqm4D2fOhczRvK', 12, '2018-04-18 15:00:49', '0000-00-00 00:00:00', 1),
+('QTep4ubGx7T8CW4c5ZVNIzMTz5pBmVDg', 12, '2018-04-21 09:59:13', '0000-00-00 00:00:00', 1),
+('qx1J6OzqwqrLZYBJ1OPmiL0yKtfm6ty1', 12, '2018-04-26 16:29:22', '0000-00-00 00:00:00', 1),
+('rIGZS2PtlcXyR1coeOxh2Ielsy3JZ5Os', 12, '2018-04-18 10:58:39', '0000-00-00 00:00:00', 1),
+('RnLqH69zcE0EyjdhoDv2DLxp83gishBJ', 12, '2018-04-19 12:59:25', '0000-00-00 00:00:00', 1),
+('s6PF4Mxcct6wnH7UYT1wE91URrQXd1M1', 14, '2018-04-19 12:59:47', '0000-00-00 00:00:00', 1),
+('SMTTiDeOQAWGT6hoQW9k4Cu8TTs1iAeA', 12, '2018-04-26 15:31:17', '0000-00-00 00:00:00', 1),
+('tm2rEl8puRxF7BeKusX5BrlpX5n7MQ1M', 12, '2018-04-21 10:11:20', '0000-00-00 00:00:00', 1),
+('TmV7oymaE57pqt2qpoKMALorJ51LxbbY', 12, '2018-05-01 20:20:41', '0000-00-00 00:00:00', 1),
+('tUzUegg7FMzxbnWeDRymHrD84GIjZaPO', 12, '2018-04-18 20:51:14', '0000-00-00 00:00:00', 1),
+('tV3Zo9fywpDaQOulycUVdTxfkSscPEa2', 12, '2018-05-01 15:41:04', '0000-00-00 00:00:00', 1),
+('U4DoDeiPyUt9ung98uTiXAd2tFCqnHQ6', 12, '2018-05-01 16:34:19', '0000-00-00 00:00:00', 1),
+('UbR6GYxpZz5YNVuG05XCFR92Ypc0R2y6', 12, '2018-04-19 09:23:24', '0000-00-00 00:00:00', 1),
+('UxkdP67Hyn415BdFiuJFEtKFN1zYYqqN', 12, '2018-04-26 15:43:21', '0000-00-00 00:00:00', 1),
+('UzudJnL98VIGznIhFwQtIbZmkFnADaC4', 12, '2018-04-28 16:14:52', '0000-00-00 00:00:00', 1),
+('v1dtvUbeSgzWXj8B83zP8qga9Pxxnj6x', 12, '2018-04-18 15:33:07', '0000-00-00 00:00:00', 1),
+('V4Up8Wst1mIQp5HhlnsYz7sAMtyYZQRO', 12, '2018-04-26 16:01:04', '0000-00-00 00:00:00', 1),
+('vdM83SO3agTsOynWY67OBZ8zzDM5VX4D', 12, '2018-04-26 15:58:56', '0000-00-00 00:00:00', 1),
+('VFwmpZMgVTC6Jcjwd6QIfTEqsGS90fW9', 9, '2018-02-16 08:04:37', '2018-02-16 08:09:03', 0),
+('VrDc6kkp7MogsI0rqaSrchZa8tCy3D5v', 12, '2018-04-26 15:31:17', '0000-00-00 00:00:00', 1),
+('w5e76O8aGr7CRcCY2rg2SN5yK4CIKbdW', 14, '2018-04-18 11:29:09', '0000-00-00 00:00:00', 1),
+('XIbzfLHXtROQwMjkjzYqtz0rokcBCZDN', 12, '2018-04-26 15:33:18', '0000-00-00 00:00:00', 1),
+('XOHWI7pH27yCUEYcwDGWJw8VxTkBAGPm', 12, '2018-04-18 12:53:25', '0000-00-00 00:00:00', 1),
+('Xvc7Ggy50XR3jqggEq1cd4x2Pp7PwNsj', 12, '2018-04-18 15:39:59', '0000-00-00 00:00:00', 1),
+('xZoSzQIcOdDq7zhI8UPpHuVEFIcQJOVr', 14, '2018-04-18 11:18:19', '0000-00-00 00:00:00', 1),
+('yJHuSFGyfGuFv08CE0FUwdQxVewuAZui', 14, '2018-04-18 11:20:13', '0000-00-00 00:00:00', 1),
+('YmxexFHVr9mfZtSPqU0vKCrL8PbRIpHq', 16, '2018-02-28 19:45:29', '2018-02-28 19:46:34', 0),
+('yS9GoE0NitckJ8jRfl6IoleGAyjRoz01', 12, '2018-04-19 12:59:08', '0000-00-00 00:00:00', 1),
+('yTjEZY64ziLZRpWEQo3ymfEcxXtdKXvd', 12, '2018-05-02 15:37:44', '0000-00-00 00:00:00', 1),
+('ZBJUGPJ5GWv8lRFzT1x1ScEj6jdfnodb', 12, '2018-04-18 15:10:19', '0000-00-00 00:00:00', 1),
+('zJQ3BI8CuF67Vf7RNMybQB0x0mQH78xv', 12, '2018-04-26 15:34:32', '0000-00-00 00:00:00', 1),
+('ZkHktYULjBCjinJ1agvoZpgeRrMHIo4n', 12, '2018-04-21 10:00:26', '0000-00-00 00:00:00', 1),
+('zoqllZIyXLGClQNL7hujiFkq9n34KE9A', 12, '2018-05-01 16:37:44', '0000-00-00 00:00:00', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id_user` int(11) NOT NULL,
+  `login` varchar(32) NOT NULL,
+  `password` blob NOT NULL,
+  `nom` varchar(32) NOT NULL,
+  `prenom` varchar(32) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tables des utilisateurs';
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id_user`, `login`, `password`, `nom`, `prenom`) VALUES
+(1, 'u1', 0x6c6f6c, 'nom', 'prenom'),
+(4, 'toto', 0x50415353574f52442822746974692229, 'hhh', 'eee'),
+(8, 'login', 0x50415353574f52442822746974692229, 'hhh', 'eee'),
+(12, 'root2', 0x50415353574f52442822726f6f74322229, 'root2', 'r'),
+(13, 'root3', 0x50415353574f52442822726f6f74332229, 'lol', 'lol'),
+(14, 'toto2', 0x50415353574f52442822746f746f322229, 'p', 'c'),
+(15, 'root4', 0x50415353574f52442822726f6f74342229, 'toto', 'titi'),
+(16, 'root5', 0x50415353574f52442822726f6f74352229, 'ro', 'ot');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `friends`
+--
+ALTER TABLE `friends`
+  ADD PRIMARY KEY (`source`,`cible`),
+  ADD KEY `cible_user` (`cible`);
+
+--
+-- Indexes for table `session`
+--
+ALTER TABLE `session`
+  ADD PRIMARY KEY (`clef`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id_user`),
+  ADD UNIQUE KEY `login` (`login`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `friends`
+--
+ALTER TABLE `friends`
+  ADD CONSTRAINT `cible_user` FOREIGN KEY (`cible`) REFERENCES `users` (`id_user`),
+  ADD CONSTRAINT `source_user` FOREIGN KEY (`source`) REFERENCES `users` (`id_user`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

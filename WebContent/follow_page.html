@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<link rel="stylesheet" href="follow_page.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<title> Friends </title>
+	</head>
+	
+	<body>
+		<header> 
+			<span style="font-size:30px;cursor:pointer;color:white" onclick="openNav()">&#9776;</span>
+			<img id="logo" src= "./TWISTER/home_page/logotrans.png" />
+
+		</header>	
+		
+		
+		<div id="friends_all">
+			
+			<div id="Followers" class="f">
+				<div class = "titre"> Followers </div>
+				
+				<div id = "followers_container" class="containers">
+				
+				</div>
+				
+				<div class = "image_st">
+				</div>
+			
+			</div>
+			
+			<div id="Following" class="f">
+				<div class = "titre"> Following </div>
+				
+				<div id = "following_container" class="containers">
+				
+				
+				</div>
+				
+				<div class = "image_st">
+				</div>
+			
+			</div>
+		
+		</div>
+		
+	</body>
+			<script>
+					function openNav() {
+						document.getElementById("mySidenav").style.width = "225px";
+						document.getElementById("main").style.marginLeft = "250px";
+					}
+					
+					function closeNav() {
+						document.getElementById("mySidenav").style.width = "0";
+						document.getElementById("main").style.marginLeft = "0";
+					}
+			</script>
+</html>

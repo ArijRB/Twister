@@ -1,0 +1,139 @@
+@font-face{
+	font-family: titlefont;
+	src : url("./TWISTER/GOTHICBI.TTF");
+}
+
+body{
+	background-image: url("./TWISTER/tornado-05.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-size: 100% 100%;
+}
+
+img{
+	max-height: 100%;
+	max-width: 100%;
+	object-fit: contain;
+}
+
+#logo{
+	position: fixed;
+	height: 40%;
+	width: 27%;
+	top: 0%;
+	left: 2%;
+}
+
+#Login_forum{
+	position: absolute;
+	width: 25%;
+	bottom: 25%;
+	right: 6%;
+}
+
+.caption{
+	margin : 0px;
+	font-size: 25px;
+	font-family: titlefont;
+	padding-left: 1%;
+}
+
+.info{
+	position: relative;
+	border-radius: 20px;
+	border-style: none; 
+	padding-left: 5%;
+	margin: 0px; 
+	height: 40px;
+	width: 100%;
+	opacity: 1;
+	background-color: white;
+	color: black;
+	font-family: titlefont;
+}
+
+.date{
+	padding-left: 2%;
+	margin-right : 5%;
+	margin-bottom: 0px;
+	width: 500px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#date_label{
+	font-family: titlefont;
+	font-size: 22px;
+}
+
+#date_format{
+	text-align: center;
+	height: 30px;
+	width: 130px;
+	border-radius: 20px;
+	border-style: none; 
+	position: relative;
+	padding-left: 8%;
+	margin-left: 15%;
+	font-family: titlefont;
+
+}
+
+.radio{
+	padding-left : 5%;
+	margin: 0px; 
+	width: auto;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.radio_part{
+	padding-left: 2%;
+	margin-right : 5%;
+	margin-bottom: 0px;
+}
+
+.radio_label{
+	font-family: titlefont;
+}
+
+.forum_title{
+	margin : 0px;
+	font-size: 40px;
+	font-family: titlefont;
+	padding-left: 1%;
+}
+
+.bouton_submits{
+	border-radius: 20px;
+	border-style: none;
+	padding: 0px;
+	margin: 0px;
+	height: 30px;
+	width: 20%;
+	font-family: titlefont;
+}
+
+#footer{
+	position: fixed;
+	width: 1000px;
+	bottom: 2%;
+	left: 1%;
+}
+
+.footer_span{
+	font-family: titlefont;
+	margin-left: 5%;
+	color: white;
+
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
